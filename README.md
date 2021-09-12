@@ -1,7 +1,9 @@
 # Stayed Up Till 4 AM Making This
-### Screenshot
+### Screenshots
+#### `/rank`
 ![](https://media.discordapp.net/attachments/886556470198546534/886562661322612798/unknown.png)
-
+#### `#leaderboards`
+![](https://cdn.discordapp.com/attachments/746258393278316630/886743445983600670/unknown.png)
 # Purpose
 Tracks Data From [Here](https://docs.google.com/spreadsheets/d/1MJLybB_wugeYsh3u1OyBRYCWNC1eJzHVJybJknagbqc/edit?usp=sharing). To allow for a `/rank` command to view stats [(See Above)](#screenshot) and auto update Discord roles to match the players current league.
 
