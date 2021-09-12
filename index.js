@@ -4,6 +4,7 @@ let config = require('./data/config.json')
 
 let updatePlayers = require('./functions/googleSheets/updatePlayerData')
 let updateRoles = require('./functions/discord/updateRoles')
+let updateLeaderboard = require('./functions/discord/updateLeaderboard')
 
 let cron = require('node-cron');
 
@@ -24,7 +25,8 @@ const client = new Discord.Client({
 client.login(config.token)
 
 client.once('ready', async () => {
-    await updatePlayers()
+    // await updatePlayers()
+    await updateLeaderboard(client)
 
     console.log(`${client.user.username} is fully operational`)
 })
@@ -44,5 +46,7 @@ cron.schedule(`*/30 * * * *`, async() => {
         await updatePlayers()
         await updateRoles(client)
 
-    }catch{}
+    }catch(e){
+        console.log(e);
+    }
 });
