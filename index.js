@@ -1,2 +1,2 @@
-let f = require('./functions/googleSheets/updateRawPlayerData')
+let f = require('./functions/googleSheets/updatePlayerData')
 f()
