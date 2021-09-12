@@ -29,11 +29,13 @@ module.exports = async (client) => {
         let { leaderboardChannelId } = require('./../../data/config.json')
 
         let messages = await client.channels.cache.get(leaderboardChannelId).messages.fetch()
-        
+
+        let content = `Last Updated: <t:${Math.floor(new Date()/1000)}:R>`
+
         if(messages.size === 0){
-            await client.channels.cache.get(leaderboardChannelId).send({embeds: embeds})
+            await client.channels.cache.get(leaderboardChannelId).send({content: content, embeds: embeds})
         }else{
-            await messages.first().edit({embeds: embeds})
+            await messages.first().edit({content: content, embeds: embeds})
 
         }
 
