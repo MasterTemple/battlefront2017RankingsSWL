@@ -3,9 +3,8 @@ let config = require('./data/config.json')
 
 
 let updatePlayers = require('./functions/googleSheets/updatePlayerData')
-let updateRoles = require('./functions/updateRoles')
+let updateRoles = require('./functions/discord/updateRoles')
 
-let add_commands = require('./functions/add_commands')
 let cron = require('node-cron');
 
 const client = new Discord.Client({
@@ -13,7 +12,7 @@ const client = new Discord.Client({
         status: 'online',
         activities: [
             {
-                name: config.bot_status,
+                name: "Star Wars Leagues",
                 type: 'STREAMING',
                 url: 'https://www.twitch.tv/directory/game/Star%20Wars%20Battlefront%20II'
             }
@@ -25,14 +24,7 @@ const client = new Discord.Client({
 client.login(config.token)
 
 client.once('ready', async () => {
-    // update_rankings()
-    console.log(`${config.bot_name} v${parseFloat(config.version).toFixed( 1)} is fully operational`) //logs that the bot is ready
-
-    await add_commands(client)
-    // await client.guilds.cache.get("863167431506001970").commands.set([])
-    // console.log('done')
-    // update_roles(client)
-
+    console.log(`${client.user.username} is fully operational`)
 })
 
 client.on('interactionCreate', async (interaction) => {
@@ -40,7 +32,7 @@ client.on('interactionCreate', async (interaction) => {
     if (interaction.type === 'APPLICATION_COMMAND') {
 
         let command = require(`./functions/slashCommands/${interaction.commandName}`)
-        command()
+        command(interaction)
     }
 
 })
@@ -48,7 +40,7 @@ client.on('interactionCreate', async (interaction) => {
 cron.schedule(`*/30 * * * *`, async() => {
     try{
         await updatePlayers()
-        await updateRoles(client, config)
+        await updateRoles(client)
 
     }catch{}
 });

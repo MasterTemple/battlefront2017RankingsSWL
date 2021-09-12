@@ -1,5 +1,5 @@
-module.exports = async (client, config) => {
-    return new Promise((resolve, reject) => {
+module.exports = async (client) => {
+    return new Promise(async(resolve, reject) => {
 
         let players = require('./../../data/playerData.json')
         let members = await client.guilds.cache.get(guildId).members.fetch()
