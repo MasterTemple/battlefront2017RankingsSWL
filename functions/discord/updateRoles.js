@@ -2,14 +2,14 @@ module.exports = async (client) => {
     return new Promise(async(resolve, reject) => {
 
         let players = require('./../../data/playerData.json')
+        let ranks = require('./../../data/ranks.json')
+
         let members = await client.guilds.cache.get(guildId).members.fetch()
-        let rankRoles = {
-            "Kyber": "ID",
-            "Diamond": "ID",
-            "Gold": "ID",
-            "Silver": "ID",
-            "Bronze": "ID",
-        }
+        let rankRoles = {}
+
+        ranks.forEach((eachRank) => {
+            rankRoles[eachRank.league] = eachRank.roleId
+        })
 
         for(let player of players){
 

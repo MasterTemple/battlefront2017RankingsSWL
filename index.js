@@ -24,6 +24,8 @@ const client = new Discord.Client({
 client.login(config.token)
 
 client.once('ready', async () => {
+    await updatePlayers()
+
     console.log(`${client.user.username} is fully operational`)
 })
 

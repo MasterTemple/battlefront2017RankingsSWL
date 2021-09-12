@@ -62,6 +62,10 @@ module.exports = async() => {
         })
 
         fs.writeFileSync('./data/playerData.json', JSON.stringify(players, null, 2))
+
+        ranks[0].percent = Math.floor((1/players.length)*100)
+        fs.writeFileSync('./data/ranks.json', JSON.stringify(ranks, null, 2))
+
         resolve()
     })
 }

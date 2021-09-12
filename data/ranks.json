@@ -1,27 +1,44 @@
 [
-    {
-        "league": "Kyber",
-        "imageUrl": "https://media.discordapp.net/attachments/886538998527438889/886539015392747620/AM-JKLV6tzfG3oM_few6dUvdlDbUpsn80_rUfQcLAiWRHSdgrM13TimYNB4MyVVGGh5p10BN5mj2TvzAOAi2JkmYMZHbtHisYJrV.png",
-        "percent": 10
-    },
-    {
-        "league": "Diamond",
-        "imageUrl": "https://media.discordapp.net/attachments/886538998527438889/886539035487637514/AM-JKLU1B89ucLBfb6gFH7vO9kYcBru5LJlUduW_dH-3lmhzk_6ScaZZKJ71QMgH7x1cS0NFA3FyjInO5PMZwjpbldVPkBsBMaSc.png",
-        "percent": 30
-    },
-    {
-        "league": "Gold",
-        "imageUrl": "https://media.discordapp.net/attachments/886538998527438889/886539051908362270/AM-JKLWygwdfyK3KrwOH_Jc6sw23BDZj6T2bFe9WFOUH8ZU55XdO4cr_m_qkJAbl1rpdCkcmhlu31ETGxDS593svDZNjts7XlBLH.png",
-        "percent": 50
-    },
-    {
-        "league": "Silver",
-        "imageUrl": "https://media.discordapp.net/attachments/886538998527438889/886539066806517790/AM-JKLV8Gsj3tQWp8y7nyvPasEHl4MUwBbAwgS7DGQRNs0G-XCUP67TrQcrGlm9bu3WvBQOSiuDY5uJmiZWviTcurGNPCFipNNkC.png",
-        "percent": 70
-    },
-    {
-        "league": "Bronze",
-        "imageUrl": "https://media.discordapp.net/attachments/886538998527438889/886539078324080650/AM-JKLWfCgDLFdIe_cbP412KIy_URkoKIauAfu97IK6XSVYBu6FpE1d6JuXs1UMZv-KUyL6Lbmxlx4JI4F0tvpGs4aQq8Yorc4G7.png",
-        "percent": 100
-    }
+  {
+    "league": "Max",
+    "imageUrl": "https://media.discordapp.net/attachments/886538998527438889/886539015392747620/AM-JKLV6tzfG3oM_few6dUvdlDbUpsn80_rUfQcLAiWRHSdgrM13TimYNB4MyVVGGh5p10BN5mj2TvzAOAi2JkmYMZHbtHisYJrV.png",
+    "roleId": "886703507682508830",
+    "percent": 8,
+    "color": "#f000ab"
+  },
+  {
+    "league": "Kyber",
+    "imageUrl": "https://media.discordapp.net/attachments/886538998527438889/886539015392747620/AM-JKLV6tzfG3oM_few6dUvdlDbUpsn80_rUfQcLAiWRHSdgrM13TimYNB4MyVVGGh5p10BN5mj2TvzAOAi2JkmYMZHbtHisYJrV.png",
+    "roleId": "814363688718696448",
+    "percent": 10,
+    "color": "#1abc9c"
+  },
+  {
+    "league": "Diamond",
+    "imageUrl": "https://media.discordapp.net/attachments/886538998527438889/886539035487637514/AM-JKLU1B89ucLBfb6gFH7vO9kYcBru5LJlUduW_dH-3lmhzk_6ScaZZKJ71QMgH7x1cS0NFA3FyjInO5PMZwjpbldVPkBsBMaSc.png",
+    "roleId": "829407973830295592",
+    "percent": 30,
+    "color": "#9b59b6"
+  },
+  {
+    "league": "Gold",
+    "imageUrl": "https://media.discordapp.net/attachments/886538998527438889/886539051908362270/AM-JKLWygwdfyK3KrwOH_Jc6sw23BDZj6T2bFe9WFOUH8ZU55XdO4cr_m_qkJAbl1rpdCkcmhlu31ETGxDS593svDZNjts7XlBLH.png",
+    "roleId": "886699367728316466",
+    "percent": 50,
+    "color": "#f1c40f"
+  },
+  {
+    "league": "Silver",
+    "imageUrl": "https://media.discordapp.net/attachments/886538998527438889/886539066806517790/AM-JKLV8Gsj3tQWp8y7nyvPasEHl4MUwBbAwgS7DGQRNs0G-XCUP67TrQcrGlm9bu3WvBQOSiuDY5uJmiZWviTcurGNPCFipNNkC.png",
+    "roleId": "886702593575899166",
+    "percent": 70,
+    "color": "#95a5a6"
+  },
+  {
+    "league": "Bronze",
+    "imageUrl": "https://media.discordapp.net/attachments/886538998527438889/886539078324080650/AM-JKLWfCgDLFdIe_cbP412KIy_URkoKIauAfu97IK6XSVYBu6FpE1d6JuXs1UMZv-KUyL6Lbmxlx4JI4F0tvpGs4aQq8Yorc4G7.png",
+    "roleId": "886702792369139825",
+    "percent": 100,
+    "color": "#a84300"
+  }
 ]

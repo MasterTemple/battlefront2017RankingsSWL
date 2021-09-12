@@ -5,14 +5,13 @@ module.exports = async (interaction) => {
     let ranks = require('./../../data/ranks')
 
     let player = playerData.find(player => player.ID === user)
+    
+    let colors = {}
 
-    let colors = {
-        "Kyber": "#1abc9c",
-        "Diamond": "#9b59b6",
-        "Gold": "#f1c40f",
-        "Silver": "#95a5a6",
-        "Bronze": "#a84300",
-    }
+    ranks.forEach((eachRank) => {
+        colors[eachRank.league] = eachRank.color
+    })
+
     let {MessageEmbed} = require('discord.js')
     let embed = new MessageEmbed()
 
