@@ -21,7 +21,7 @@ module.exports = async (client) => {
         })
 
         for(let player of players){
-            embedMap[player.league].setDescription(`${embedMap[player.league].description}**${player.rank}.** <@${player.ID}>\n`)
+            embedMap[player.league].setDescription(`${embedMap[player.league].description}**${player.rank}.** <@${player.ID}> **${player.MMR} MMR**\n`)
         }
 
         let embeds = Object.values(embedMap)
