@@ -5,6 +5,7 @@ let config = require('./data/config.json')
 let updatePlayers = require('./functions/googleSheets/updatePlayerData')
 let updateRoles = require('./functions/discord/updateRoles')
 let updateLeaderboard = require('./functions/discord/updateLeaderboard')
+let rgbRoleUpdate = require('./functions/discord/rgbRoleUpdate')
 let addCommands = require('./functions/addCommands')
 
 let cron = require('node-cron');
@@ -27,9 +28,9 @@ client.login(config.token)
 
 client.once('ready', async () => {
 
-    await updatePlayers()
-    await updateLeaderboard(client)
-    await updateRoles(client)
+    // await updatePlayers()
+    // await updateLeaderboard(client)
+    // await updateRoles(client)
 
     console.log(`${client.user.username} is fully operational`)
     
@@ -54,4 +55,9 @@ cron.schedule(`*/30 * * * *`, async() => {
     }catch(e){
         console.log(e);
     }
+});
+cron.schedule(`*/10 * * * * *`, async() => {
+    
+    await rgbRoleUpdate(client)
+
 });
