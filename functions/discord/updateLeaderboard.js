@@ -29,15 +29,30 @@ module.exports = async (client) => {
         let { leaderboardChannelId } = require('./../../data/config.json')
 
         let channel = await client.channels.cache.get(leaderboardChannelId)
-        console.log(channel);
+        // console.log(channel);
         let messages = await channel.messages.fetch()
         
         let content = `Last Updated: <t:${Math.floor(new Date()/1000)}:R>`
+        let leaderboardUrl = "https://starwarsleagues.com/leaderboards"
+
+        let components = [
+            {
+                "type": 1,
+                "components": [
+                    {
+                        "type": 2,
+                        "label": "View Leaderboards!",
+                        "style": 5,
+                        "url": leaderboardUrl
+                    }                   
+                ]
+            }
+    ]
 
         if(messages.size === 0){
-            await client.channels.cache.get(leaderboardChannelId).send({content: content, embeds: embeds})
+            await client.channels.cache.get(leaderboardChannelId).send({content: content, embeds: embeds, components: components})
         }else{
-            await messages.first().edit({content: content, embeds: embeds})
+            await messages.first().edit({content: content, embeds: embeds, components: components})
 
         }
 
