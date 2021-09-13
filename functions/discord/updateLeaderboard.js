@@ -28,8 +28,10 @@ module.exports = async (client) => {
         embeds.shift() // removes the MAX league
         let { leaderboardChannelId } = require('./../../data/config.json')
 
-        let messages = await client.channels.cache.get(leaderboardChannelId).messages.fetch()
-
+        let channel = await client.channels.cache.get(leaderboardChannelId)
+        console.log(channel);
+        let messages = await channel.messages.fetch()
+        
         let content = `Last Updated: <t:${Math.floor(new Date()/1000)}:R>`
 
         if(messages.size === 0){
