@@ -26,11 +26,13 @@ const client = new Discord.Client({
 client.login(config.token)
 
 client.once('ready', async () => {
-    await addCommands(client)
+
     await updatePlayers()
     await updateLeaderboard(client)
+    await updateRoles(client)
 
     console.log(`${client.user.username} is fully operational`)
+    
 })
 
 client.on('interactionCreate', async (interaction) => {

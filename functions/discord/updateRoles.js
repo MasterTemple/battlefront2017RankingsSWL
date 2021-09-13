@@ -3,7 +3,7 @@ module.exports = async (client) => {
 
         let players = require('./../../data/playerData.json')
         let ranks = require('./../../data/ranks.json')
-
+        let {guildId} = require('./../../data/config.json')
         let members = await client.guilds.cache.get(guildId).members.fetch()
         let rankRoles = {}
 
