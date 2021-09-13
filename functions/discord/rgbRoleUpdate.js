@@ -17,5 +17,6 @@ module.exports = async (client) => {
         if(index === colors.length) index = 0
 
         await role.setColor(colors[index])
+        resolve()
     })
 }
