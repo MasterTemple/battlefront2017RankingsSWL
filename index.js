@@ -28,9 +28,9 @@ client.login(config.token)
 
 client.once('ready', async () => {
 
-    // await updatePlayers()
-    // await updateLeaderboard(client)
-    // await updateRoles(client)
+    await updatePlayers()
+    await updateLeaderboard(client)
+    await updateRoles(client)
 
     console.log(`${client.user.username} is fully operational`)
     
@@ -46,12 +46,11 @@ client.on('interactionCreate', async (interaction) => {
 
 })
 
-cron.schedule(`*/30 * * * *`, async() => {
+cron.schedule(`*/5 * * * *`, async() => {
     try{
         await updatePlayers()
-        await updateRoles(client)
         await updateLeaderboard(client)
-
+        await updateRoles(client)
     }catch(e){
         console.log(e);
     }

@@ -2,7 +2,7 @@ module.exports = async (client) => {
     return new Promise(async(resolve, reject) => {
 
         let players = require('./../../data/playerData.json')
-        players[0].league = "Kyber" //changes MAX to Kyber
+        // players[0].league = "Kyber" //changes MAX to Kyber
         let ranks = require('./../../data/ranks.json')
 
         let {MessageEmbed} = require('discord.js')
@@ -25,7 +25,7 @@ module.exports = async (client) => {
         }
 
         let embeds = Object.values(embedMap)
-        embeds.shift() // removes the MAX league
+        // embeds.shift() // removes the MAX league
         let { leaderboardChannelId } = require('./../../data/config.json')
 
         let channel = await client.channels.cache.get(leaderboardChannelId)
