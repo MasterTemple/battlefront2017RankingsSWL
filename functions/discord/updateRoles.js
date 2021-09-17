@@ -14,6 +14,7 @@ module.exports = async (client) => {
         for(let player of players){
 
             let member = members.get(player.ID)
+            if(!member) continue;
             let currentRoles = [...member.roles.cache.keys()]
 
             for(let eachRankRole of Object.values(rankRoles)){
